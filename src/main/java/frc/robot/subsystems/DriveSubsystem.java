@@ -7,7 +7,10 @@
 
 package frc.robot.subsystems;
 
+import edu.wpi.first.wpilibj.ADXRS450_Gyro;
+import edu.wpi.first.wpilibj.VictorSP;
 import edu.wpi.first.wpilibj.command.Subsystem;
+import frc.robot.RobotMap;
 
 /**
  * Add your docs here.
@@ -56,7 +59,7 @@ public class DriveSubsystem extends Subsystem {
 
   public static DriveSubsystem getInstance() {
     if (instance == null ) {
-      instance == new DriveTrain();
+      instance = new DriveSubsystem();
     }
     return instance;
   }
